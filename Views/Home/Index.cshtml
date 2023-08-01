@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+
+<body class="index">
+
+    <h1>Elecciones 2023</h1>
+
+    @for (int i = 0; i < ViewBag.Partidos.Count; i++)
+
+    {
+        <div class="conteiner">
+            <div class="card">
+                <p>@ViewBag.Partidos[i].Nombre</p>
+                <img src="~/img/@ViewBag.Partidos[i].Logo" width="275px" height="300px">
+                <form method="post" action='@Url.Action("VerDetallePartido")'>
+                <input type="hidden" name="idPartido" value="@ViewBag.Partidos[i].idPartido">
+                <input type="submit" value="Ver más">
+                </form>
+            </div>
+        </div>
+    }
+    </div>
+</body>
+
+</html>

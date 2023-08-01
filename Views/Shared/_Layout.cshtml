@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Elecciones 2023</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+
+
+    <header>
+        <nav class="barraNavegar">
+            <ul>
+                <li><a href='@Url.Action("Index")'><img src="../img/Bandera.png"></a></li>
+                <li><a href='@Url.Action("Elecciones")'>Elecciones 2023</a></li>
+                <li><a href='@Url.Action("Creditos")'>Creditos</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div style="padding:20px 10px 0px 10px;">
+        @RenderBody()
+    </div>
+
+    <footer>
+        &copy; @DateTime.Now.Year - Realizado por Alex Droblas y Simon Suken
+    </footer>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

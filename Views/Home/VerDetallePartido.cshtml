@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles Candidatos</title>
+</head>
+
+<body class="detallePartido">
+
+    <h1>Informacion Partido</h1>
+
+    <div class="hojaInfo">
+        <h1>@ViewBag.InfoPartido.Nombre</h1>
+        <img src="~/img/@ViewBag.InfoPartido.Logo" width="275px" height="300px">
+        <p>La fecha de fundacion de este partido fue en: @ViewBag.InfoPartido.FechaFundacion.ToShortDateString()</p>
+        <p>Cantidad de senadores: @ViewBag.InfoPartido.CantidadSenadores</p>
+        <p>Cantidad de diputados: @ViewBag.infoPartido.CantidadDiputados</p>
+        <p>Pagina Web: @ViewBag.InfoPartido.SitioWeb</p>
+        <form method="post" action='@Url.Action("AgregarCandidato")'>
+            <input type="hidden" name="idPartido" value=@ViewBag.InfoPartido.idPartido>
+            <input type="submit" value="Agregar Candidato">
+        </form>
+    </div>
+
+    <div class="hojas">
+
+        @foreach (var candidato in ViewBag.CandidatosLista){
+            <div class="hojaCandidato">
+                <form method="post" action='@Url.Action("VerDetalleCandidato")'>
+                @if (ViewBag.InfoCandidato != null)
+                    {
+                        <input type="hidden" name="cand" value="@ViewBag.InfoCandidato.idCandidato">
+                    }
+                <input type="submit" value="Ver Candidato">
+                </form>
+            </div>
+        }
+      </div>
+    
+
+
+</body>
+
+</html>

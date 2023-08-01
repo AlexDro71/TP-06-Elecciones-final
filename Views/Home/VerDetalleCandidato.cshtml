@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles Candidatos</title>
+</head>
+<body class="detalleCandidato">
+
+        <div class="hojaPersonal">
+            
+
+
+            <form method="post" action='@Url.Action("VerDetallePartido")'>
+            <input type="hidden" name="idPartido" value=@ViewBag.InfoPartido.idPartido>
+            <input type="submit" value="Volver">
+        </form>
+        </div>
+</body>
+</html>

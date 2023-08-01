@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Elecciones 2023</h1>
+<form action='@Url.Action("GuardarCandidato")' method="post">
+    <div class="agregarInfo">
+        <h3>Ingresar nombre del candidato:</h3>
+        <input type="text">
+        <h3>Ingresar apellido del candidato:</h3>
+        <input type="text">
+        <h3>Ingresar fecha de nacimiento:</h3>
+        <input type="date">
+        <h3>Ingresar el link de la foto:</h3>
+        <input type="text">
+        <h3>Ingresar postulacion:</h3>
+        <input type="text">
+    </div>
+    <div class="botonGuardar">
+        <input type="hidden" name="idPartido" value="@ViewBag.idPartido">
+        <input type="submit" value="Guardar Candidato">
+    </div>
+</form>
+
+</body>
+</html>
