@@ -10,10 +10,8 @@
 
         <div class="hojaPersonal">
             
-
-
             <form method="post" action='@Url.Action("VerDetallePartido")'>
-            <input type="hidden" name="idPartido" value=@ViewBag.InfoPartido.idPartido>
+            <input type="hidden" name="idPartido" value="@ViewBag.InfoPartido.idPartido">
             <input type="submit" value="Volver">
         </form>
         </div>

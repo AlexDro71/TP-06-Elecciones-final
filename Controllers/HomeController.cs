@@ -25,6 +25,7 @@ public class HomeController : Controller
 
     public IActionResult VerDetalleCandidato(int idCandidato)
     {
+        Console.WriteLine(idCandidato);
         Candidato cand = BD.verInfoCandidato(idCandidato);
         ViewBag.InfoCandidato = cand;
         return View();

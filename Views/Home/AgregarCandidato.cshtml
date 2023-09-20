@@ -11,16 +11,16 @@
     <h1>Elecciones 2023</h1>
 <form action='@Url.Action("GuardarCandidato")' method="post">
     <div class="agregarInfo">
-        <h3>Ingresar nombre del candidato:</h3>
-        <input type="text">
         <h3>Ingresar apellido del candidato:</h3>
-        <input type="text">
+        <input type="text" name="Apellido">
+        <h3>Ingresar apellido del candidato:</h3>
+        <input type="text" name="Nombre">
         <h3>Ingresar fecha de nacimiento:</h3>
-        <input type="date">
+        <input type="date" name="FechaNacimiento">
         <h3>Ingresar el link de la foto:</h3>
-        <input type="text">
+        <input type="text" name="Foto">
         <h3>Ingresar postulacion:</h3>
-        <input type="text">
+        <input type="text" name="Postulacion">
     </div>
     <div class="botonGuardar">
         <input type="hidden" name="idPartido" value="@ViewBag.idPartido">
